@@ -1,24 +1,27 @@
+import './home.css';
 export default function Home() {
   return (
-    <>
-      <div class="formcontainer">
+    <div className="home_container">
+      <div className="formcontainer">
         <h1>Some Form</h1>
-        <div class="formrows">
+        <div className="formrows">
           <fieldset>
-            <div class="formelements"><label for="email">Email:</label></div>
-            <div class="formelements">
+            <div className="formelements">
+              <label for="email">Email:</label>
+            </div>
+            <div className="formelements">
               <input type="text" id="email" name="email" placeholder="Email" />
             </div>
           </fieldset>
         </div>
 
         <hr />
-        <div class="formrows">
+        <div className="formrows">
           <fieldset>
-            <div class="formelements">
+            <div className="formelements">
               <label for="password">Password:</label>
             </div>
-            <div class="formelements">
+            <div className="formelements">
               <input
                 type="text"
                 id="password"
@@ -28,12 +31,12 @@ export default function Home() {
             </div>
           </fieldset>
         </div>
-        <div class="formrows">
+        <div className="formrows">
           <fieldset>
-            <div class="formelements">
+            <div className="formelements">
               <label for="confirm-password">Confirm-password</label>
             </div>
-            <div class="formelements">
+            <div className="formelements">
               <input
                 type="text"
                 id="confirm-password"
@@ -43,12 +46,12 @@ export default function Home() {
             </div>
           </fieldset>
         </div>
-        <div class="formrows">
+        <div className="formrows">
           <fieldset>
-            <div class="formelements">
+            <div className="formelements">
               <label for="secret-code"></label>Secret-code
             </div>
-            <div class="formelements">
+            <div className="formelements">
               <input
                 type="text"
                 id="secret-code"
@@ -59,18 +62,15 @@ export default function Home() {
             </div>
           </fieldset>
         </div>
-        <div class="btnrow">
-          <div class="buttons"><input type="button" value="SignUp" /></div>
-          <div class="buttons">
-            <input
-              type="button"
-              id="signin"
-              value="SignIn"
-            />
+        <div className="btnrow">
+          <div className="buttons">
+            <input type="button" value="SignUp" />
+          </div>
+          <div className="buttons">
+            <input type="button" id="signin" value="SignIn" />
           </div>
         </div>
       </div>
-      
-    </>
+    </div>
   );
 }
