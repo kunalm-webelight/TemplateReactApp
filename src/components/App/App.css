@@ -1,3 +1,144 @@
 .root{
   padding: 10px;;
 }
+.image {
+  src: url(brand-1.webp);
+  height: 50px;
+  width: 100px;
+}
+body {
+  /* background-image:url(canyon.jpg);
+      height: 100%;
+      background-size: cover; */
+  background-image: url(canyon.jpg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+.nav-bar {
+  /* shared with brand-image*/
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  white-space: nowrap;
+}
+.header-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+  height: 55px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.brand-image {
+  /* shared with nav-bar*/
+  width: 25%;
+}
+.top-block {
+  padding: 5px 0px;
+  background-color: rgb(225, 229, 233);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.leftcontent {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rightcontent {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: black;
+  padding: 14px 16px;
+}
+a:hover {
+  background-color: rgb(218, 218, 218);
+}
+.container {
+  padding: 0;
+}
+.formcontainer {
+  border-radius: 10px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 28%);
+  box-shadow: 20px 40px 90px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  width: 700px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.formrows {
+  margin-top: 10px;
+  height: max-content;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.btnrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formelements {
+  padding: 10px 0px;
+  height: max-content;
+  width: 100%;
+}
+.buttons {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  caret-color: transparent;
+  height: 100%;
+  padding: 16px 5px;
+  width: 100%;
+}
+input[type="button"] {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: orange;
+  padding: 10px;
+}
+input[type="text"],
+[type="email"] {
+  border: none;
+  border-radius: 5px;
+}
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+  background-color: rgb(255, 225, 171);
+}
+input[type="button"]:focus {
+  outline-color: white;
+  border-color: white;
+}
+input[type="button"]:hover {
+  background-color: rgb(255, 206, 116);
+}
+fieldset {
+  border: 2px groove rgba(255, 255, 255, 0.151);
+}
+.btnrow {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
