@@ -7,13 +7,24 @@ export default function Home() {
     confPass: "",
     secretCode: "",
   });
+
   const { email, password, confPass, secretCode } = formData;
   const handleFormData = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const cars = ["ford", "daimler", "ferrari", "mitsubishi"];
+  const abc = () => {
+    return cars.map((item) => {
+      return <li>{item}</li>;
+    });
+  };
   return (
     <div className="home_container">
+      {/* {cars.map((item)=>{
+        return(<li>{item}</li>);
+      })} */}
+      {abc()}
       <div className="formcontainer">
         <h1>Some Form</h1>
         <div className="formrows">
