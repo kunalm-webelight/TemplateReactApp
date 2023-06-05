@@ -53,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+// hooks states props
