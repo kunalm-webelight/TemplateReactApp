@@ -1,26 +1,18 @@
-import { useState ,useEffect} from "react";
+import { useState } from "react";
 import "./home.css";
 export default function Home() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confPass: "",
+    secretCode: "",
+  });
+  const { email, password, confPass, secretCode } = formData;
+  const handleFormData = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
-const [email, setEmail] = useState();
-const [password, setPassword] = useState();
-const [confPass, setConfPass] = useState();
-const [secretCode, setSecretCode] = useState();
-
-const handleEmail=(event)=>{
-  setEmail(event.target.value);
-}
-const handlePassword=(event)=>{
-  setPassword(event.target.value);
-}
-const handleConfPass=(event)=>{
-  setConfPass(event.target.value);
-}
-const handleSecretCode=(event)=>{
-  setSecretCode(event.target.value);
-}
-
-return (
+  return (
     <div className="home_container">
       <div className="formcontainer">
         <h1>Some Form</h1>
@@ -30,7 +22,14 @@ return (
               <label htmlFor="email">Email:</label>
             </div>
             <div className="formelements">
-              <input type="text" id="email" name="email" value={email} onChange={handleEmail} placeholder="Email" />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={email}
+                onChange={handleFormData}
+                placeholder="Email"
+              />
             </div>
           </fieldset>
         </div>
@@ -47,7 +46,7 @@ return (
                 id="password"
                 name="password"
                 value={password}
-                onChange={handlePassword}
+                onChange={handleFormData}
                 placeholder="Password"
               />
             </div>
@@ -61,11 +60,11 @@ return (
             <div className="formelements">
               <input
                 type="text"
-                id="confirm-password"
-                name="something"
+                id="confPass"
+                name="confPass"
                 placeholder="Confirm-password"
+                onChange={handleFormData}
                 value={confPass}
-                onChange={handleConfPass}
               />
             </div>
           </fieldset>
@@ -79,9 +78,9 @@ return (
               <input
                 type="text"
                 id="secret-code"
-                name="secret-code"
+                name="secretCode"
                 placeholder="Secret-code"
-                onChange={handleSecretCode}
+                onChange={handleFormData}
                 value={secretCode}
               />
             </div>
