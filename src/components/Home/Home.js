@@ -13,99 +13,97 @@ export default function Home() {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const cars = ["ford", "daimler", "ferrari", "mitsubishi"];
-  const abc = () => {
-    return cars.map((item) => {
-      return <li>{item}</li>;
-    });
-  };
+  function mymethod(e){
+    e.preventDefault();
+    console.log("submitted form");
+    // alert("submitted form");
+  }
   return (
     <div className="home_container">
-      {/* {cars.map((item)=>{
-        return(<li>{item}</li>);
-      })} */}
-      {abc()}
       <div className="formcontainer">
-        <h1>Some Form</h1>
-        <div className="formrows">
-          <fieldset>
-            <div className="formelements">
-              <label htmlFor="email">Email:</label>
-            </div>
-            <div className="formelements">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                value={email}
-                onChange={handleFormData}
-                placeholder="Email"
-              />
-            </div>
-          </fieldset>
-        </div>
+      <h1>Some Form</h1>
+        <form action="" onSubmit={mymethod}/*method="POST"*/>
+          <div className="">
+            <fieldset>
+              <div className="formelements">
+                <label htmlFor="email">Email:</label>
+              </div>
+              <div className="formelements">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={handleFormData}
+                  placeholder="Email"
+                />
+              </div>
+            </fieldset>
+          </div>
 
-        <hr />
-        <div className="formrows">
-          <fieldset>
-            <div className="formelements">
-              <label htmlFor="password">Password:</label>
-            </div>
-            <div className="formelements">
-              <input
-                type="text"
-                id="password"
-                name="password"
-                value={password}
-                onChange={handleFormData}
-                placeholder="Password"
-              />
-            </div>
-          </fieldset>
-        </div>
-        <div className="formrows">
-          <fieldset>
-            <div className="formelements">
-              <label htmlFor="confirm-password">Confirm-password</label>
-            </div>
-            <div className="formelements">
-              <input
-                type="text"
-                id="confPass"
-                name="confPass"
-                placeholder="Confirm-password"
-                onChange={handleFormData}
-                value={confPass}
-              />
-            </div>
-          </fieldset>
-        </div>
-        <div className="formrows">
-          <fieldset>
-            <div className="formelements">
-              <label htmlFor="secret-code"></label>Secret-code
-            </div>
-            <div className="formelements">
-              <input
-                type="text"
-                id="secret-code"
-                name="secretCode"
-                placeholder="Secret-code"
-                onChange={handleFormData}
-                value={secretCode}
-              />
-            </div>
-          </fieldset>
-        </div>
-        <div className="btnrow">
-          <div className="buttons">
-            <input type="button" value="SignUp" />
+          <div className="">
+            <fieldset>
+              <div className="formelements">
+                <label htmlFor="password">Password:</label>
+              </div>
+              <div className="formelements">
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={handleFormData}
+                  placeholder="Password"
+                />
+              </div>
+            </fieldset>
           </div>
-          <div className="buttons">
-            <input type="button" id="signin" value="SignIn" />
+          <div className="">
+            <fieldset>
+              <div className="formelements">
+                <label htmlFor="confPass">Confirm-password</label>
+              </div>
+              <div className="formelements">
+                <input
+                  type="text"
+                  id="confPass"
+                  name="confPass"
+                  placeholder="Confirm-password"
+                  onChange={handleFormData}
+                  value={confPass}
+                />
+              </div>
+            </fieldset>
           </div>
-        </div>
+          <div className="">
+            <fieldset>
+              <div className="formelements">
+                <label htmlFor="secretCode">Secret-code</label>
+              </div>
+              <div className="formelements">
+                <input
+                  type="text"
+                  id="secretCode"
+                  name="secretCode"
+                  placeholder="Secret-code"
+                  onChange={handleFormData}
+                  value={secretCode}
+                />
+              </div>
+            </fieldset>
+          </div>
+          <div className="btnrow">
+            <div className="buttons">
+              <input type="submit" value="SignUp" />
+            </div>
+            <div className="buttons">
+              <input type="submit" id="signin" value="SignIn" />
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
+
+

@@ -17,7 +17,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  .formrows {
+  form {
     margin-top: 10px;
     height: max-content;
     width: 60%;
@@ -40,7 +40,7 @@
     padding: 16px 5px;
     width: 100%;
   }
-  input[type="button"] {
+  input[type="submit"] {
     border-radius: 5px;
     border: none;
     color: white;
@@ -57,11 +57,11 @@
     outline: none;
     background-color: rgb(255, 225, 171);
   }
-  input[type="button"]:focus {
+  input[type="submit"]:focus {
     outline-color: white;
     border-color: white;
   }
-  input[type="button"]:hover {
+  input[type="submit"]:hover {
     background-color: rgb(255, 206, 116);
   }
   fieldset {
