@@ -16,7 +16,6 @@ export default function Home() {
   function mymethod(e){
     e.preventDefault();
     console.log("submitted form");
-    // alert("submitted form");
   }
   return (
     <div className="home_container">
