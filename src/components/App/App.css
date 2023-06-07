@@ -20,9 +20,11 @@ body {
   top: 0;
   left: 0;
   width: 100vw; 
+  z-index: 99999;
 }
 .nav-bar {
   /* shared with brand-image*/
+  align-items: center;
   width: 40%;
   display: flex;
   flex-direction: row;
@@ -69,36 +71,37 @@ body {
   height: max-content;
   margin-top: 83px;
 }
-a {
+.rootWindow{
+  height: 90vh;
+}
+.span_btn {
   text-decoration: none;
   color: black;
   padding: 14px 16px;
 }
-a:hover {
+.span_btn:hover,.dropbtn:hover{
   background-color: rgb(218, 218, 218);
 }
 .dropdown {
+  height: 18px;
   float: left;
-  overflow: hidden;
-}
+  width: 75px;
+  position: relative;
+} 
 .dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: black;
   padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-size: 16px;
 }
 
 .dropdown-content {
+  top:18px;
+  left:-50px;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 999999;
 }
 .dropdown-content a {
   float: none;
@@ -113,7 +116,7 @@ a:hover {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.show{
   display: block;
 }
 .container {

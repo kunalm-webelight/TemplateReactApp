@@ -92,12 +92,8 @@ export default function Home() {
             </fieldset>
           </div>
           <div className="btnrow">
-            <div className="buttons">
-              <input type="submit" value="SignUp" />
-            </div>
-            <div className="buttons">
-              <input type="submit" id="signin" value="SignIn" />
-            </div>
+              <button type="submit" className="buttons">SignUp</button>
+              <button type="submit" className="buttons">SignIn</button>
           </div>
         </form>
       </div>
