@@ -1,5 +1,5 @@
 import React from "react";
-import brandLogo from "../assets/brand-1.jpg";
+import brandImage from "../../assets/mmtlogo.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './header.css'
@@ -31,7 +31,7 @@ const handleNavigation=(pathName)=>{
 
         <div className="header-block">
           <div className="brand-image">
-            <img src={brandLogo} alt="" />
+            <img src={brandImage} alt="" />
           </div>
           <nav className="nav-bar">
             <span onClick={()=>navigate("/home")} className="span_btn">Home</span>

@@ -3,8 +3,8 @@ import Home from "../Home/Home.js";
 import Contact from "../Contact/Contact";
 import Blog from "../Blog/Blog";
 import Services from "../Services/Services";
-import ToDo from "../Services/ToDo";
-import { Header } from "../header.tsx";
+import ToDo from "../../components/ToDo/ToDo.js";
+import { Header } from "../Header/header.tsx";
 import "./App.css";
 function App() {
 

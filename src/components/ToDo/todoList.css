@@ -1,0 +1,9 @@
+
+.displayArea{
+    align-self: center;
+}
+.right_section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
